@@ -1,0 +1,3 @@
+Create a python fastAPI endpoint that takes in an English letter and returns a poet with a first name that begins with that letter (https://poetrydb.org/author can be used as a free backend API call)
+Write a DockerFile to create an image for the API
+Create a terraform file for a potential infrastructure option if the API was to be hosted in the cloud.
