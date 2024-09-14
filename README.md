@@ -1,4 +1,4 @@
-Steps to Deploy
+Steps to Deploy to ECS
 1. **Build the Docker Image:**
    ```bash
    docker build -t fastapi-poet .
@@ -14,5 +14,5 @@ Steps to Deploy
 3. **Apply the Terraform Configuration:**
    ```bash
    terraform init
-   terraform apply
+   terraform apply -f ecs.tf
    ```
