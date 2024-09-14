@@ -1,3 +1,18 @@
-Create a python fastAPI endpoint that takes in an English letter and returns a poet with a first name that begins with that letter (https://poetrydb.org/author can be used as a free backend API call)
-Write a DockerFile to create an image for the API
-Create a terraform file for a potential infrastructure option if the API was to be hosted in the cloud.
+Steps to Deploy
+1. **Build the Docker Image:**
+   ```bash
+   docker build -t fastapi-poet .
+   ```
+
+2. **Tag and Push to a Container Registry (e.g., AWS ECR):**
+   ```bash
+   aws ecr create-repository --repository-name fastapi-poet
+   docker tag fastapi-poet:latest <AWS_ECR_URL>:latest
+   docker push <AWS_ECR_URL>:latest
+   ```
+
+3. **Apply the Terraform Configuration:**
+   ```bash
+   terraform init
+   terraform apply
+   ```
